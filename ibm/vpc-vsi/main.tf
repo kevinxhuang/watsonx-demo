@@ -1,3 +1,7 @@
+provider "ibm" {
+  region = var.region
+}
+
 data "ibm_resource_group" "rg" {
   count = var.resource_group == "Default" ? 0 : 1
   name  = var.resource_group
