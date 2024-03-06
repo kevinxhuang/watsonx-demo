@@ -41,36 +41,11 @@ variable "tags" {
 variable "vpc_vsi_image_name" {
   description = "VPC VSI image name"
   type        = string
-  default     = "ibm-ubuntu-22-04-3-minimal-amd64-2"
+  default     = "ibm-ubuntu-20-04-6-minimal-amd64-1"
 }
 
 variable "vpc_vsi_profile_name" {
   description = "VPC VSI profile name"
   type        = string
-  default     = "gx3-16x80x1l4"
+  default     = "bx2-2x8"
 }
-
-variable "jupyter_lab_image" {
-  description = "Jupyter Lab container image"
-  type        = string
-  default     = "quay.io/jupyter/pytorch-notebook:cuda12-latest"
-}
-
-variable "gpu_count" {
-  description = "GPU counnt for Jupyter Lab container"
-  type        = string
-  default     = "all"
-}
-
-variable "cpu_limit" {
-  description = "CPU limit for Jupyter Lab container"
-  type        = string
-  default     = "6"
-}
-
-variable "memory_limit" {
-  description = "Memory limit for Jupyter Lab container"
-  type        = string
-  default     = "24G"
-}
-
